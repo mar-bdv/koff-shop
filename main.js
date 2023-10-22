@@ -1,5 +1,5 @@
 import 'normalize.css';
-import './style.scss'
+import '/style.scss'
 import { Navigation, Thumbs } from 'swiper/modules'
 import Swiper from 'swiper';
 import 'swiper/css';
