@@ -7,12 +7,11 @@ export class Order {
         if (!Order.instance) {
             Order.instance = this; 
 
-            this.element = document.createElement("order");
+            this.element = document.createElement("section");
             this.element.classList.add("order");
             this.containerElement = addContainer(this.element, "order__container");
             this.isMounted = false;
         }
-
         return Order.instance;
     }
 
@@ -20,7 +19,6 @@ export class Order {
         if (this.isMounted) {
             return;
         }
-
 
         this.containerElement.insertAdjacentHTML("beforeend", this.getHTML());
         

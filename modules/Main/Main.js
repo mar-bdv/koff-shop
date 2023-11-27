@@ -1,8 +1,6 @@
-import { Order } from "../Order/Order";
 
 export class Main {
     static instance = null;
-    
 
     constructor() {
         if (!Main.instance) {
@@ -10,9 +8,6 @@ export class Main {
 
             this.element = document.createElement("main");
             this.isMounted = false;
-            
-            
-    
         }
 
         return Main.instance;

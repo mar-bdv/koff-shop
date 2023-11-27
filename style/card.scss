@@ -1,5 +1,8 @@
 .card {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
     
     &__link {
@@ -17,10 +20,22 @@
         width: 100%;
         object-fit: cover;
         border-radius: 16px;
+        aspect-ratio: 7/6;
+
+        @media (min-width: 580px) {
+            aspect-ratio: 23/20;
+
+        }
+        @media (min-width: 820px) {
+            aspect-ratio: 151/125;
+            
+        }
 
     }
 
     &__info {
+        flex-grow: 1;
+
         @media (min-width: 580px) {
             display: flex;
             gap: 5px;
@@ -56,13 +71,43 @@
         padding: 12px 24px;
         border: 1px solid #780096;
         border-radius: 32px;
+        
+        &:hover {
+            color: #FFFFFF;
+            border-color: #9200B7;
+            background-color: #9200B7;
+        }
+        &:active {
+            color: #C0F;
+            border-color: #C0F;
+            background-color: transparent;
 
+        }
     }
 
     &__favorite {
         position: absolute;
         top: 12px;
         right: 12px;
+
+        svg {
+            fill: #FFFFFF;
+        }
+
+        &:hover,
+        &_active {
+            
+            color: #780096;
+            svg {
+                fill: #780096;
+            }
+        }
+        &:active {
+            color: #C0F;
+            svg {
+                fill: #C0F;
+            }        
+        }
     }
 }
 
